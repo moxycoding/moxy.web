@@ -1,9 +1,9 @@
-FROM mhart/alpine-node:10
-ENV PORT 80
+FROM mhart/alpine-node:10 AS final
 WORKDIR /app
-COPY .  /app
-RUN yarn \
-    && npm run build
+ENV PORT 80
+COPY . /app
+RUN npm install --registry=https://registry.npm.taobao.org
+RUN npm run build
 
-ENTRYPOINT ['npm','run','start']
+CMD ["npm", "start"]
 
