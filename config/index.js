@@ -1,4 +1,2 @@
-const config = {
-  apiBaseUrl: '//api.1xy2.com/api'
-}
+const config = {}
 export default config

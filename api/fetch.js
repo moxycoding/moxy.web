@@ -3,8 +3,8 @@ import axios from 'axios'
 // import qs from 'qs'F
 
 const instance = axios.create({
-  baseURL: process.env.baseUrl // api的base_url
-  // timeout: 10000 // 请求超时时间
+  baseURL: process.env.baseUrl, // api的base_url
+  timeout: 10000 // 请求超时时间
   // transformRequest: data => qs.stringify(data)
 })
 // request拦截器

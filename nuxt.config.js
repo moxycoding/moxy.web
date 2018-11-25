@@ -3,7 +3,7 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
   env: {
-    baseUrl: process.env.BASE_URL || 'https://api.1xy2.com/api'
+    baseUrl: process.env.API_BASE_URL || 'http://localhost:64832/api'
   },
   /*
    ** Headers of the page
