@@ -1,9 +1,9 @@
 import axios from 'axios'
-// import _config from '@/config'
+import _config from '@/config'
 // import qs from 'qs'F
 
 const instance = axios.create({
-  baseURL: process.env.baseUrl, // api的base_url
+  baseURL: _config.apiBaseUrl, // api的base_url
   timeout: 10000 // 请求超时时间
   // transformRequest: data => qs.stringify(data)
 })
