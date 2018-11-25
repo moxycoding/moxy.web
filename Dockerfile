@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:10 AS build
+FROM mhart/alpine-node:10
 ENV PORT 80
 WORKDIR /app
 COPY .  /app
