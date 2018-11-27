@@ -16,6 +16,7 @@
     </div>
     <footer v-html="appInfo.footer" id="layout-footer" :class="{'layout-footer-block':!computedEnd}">
     </footer>
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </div>
 </template>
 <script>

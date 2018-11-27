@@ -54,9 +54,12 @@ export default {
     return { model: artRes.data }
   },
   mounted() {
-    this.$utils.dynamicLoadJs(
-      '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-    )
+    var pagePv = document.getElementById('busuanzi_value_page_pv')
+    if (pagePv && pagePv.innerText === '...') {
+      this.$utils.dynamicLoadJs(
+        '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+      )
+    }
   }
 }
 </script>
