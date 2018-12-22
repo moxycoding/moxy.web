@@ -2,7 +2,7 @@
   <div>
     <div class="place">
       <nuxt-link
-        :to="{path:'/tags/'+item.tagName}"
+        :to="{path:'/tags/'+item}"
         v-for="item in $store.state.tagsList"
         :class="{'active':tagName==item}"
         :key="item"
