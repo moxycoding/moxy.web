@@ -1,12 +1,27 @@
 <template>
   <div>
     <div class="place">
-      <nuxt-link :to="{path:'/category/'+item.categoryName}" v-for="item in $store.state.categoryList" :class="{'active':categoryName==item.categoryName}" :key="item.id" v-html="item.categoryName"></nuxt-link>
+      <nuxt-link
+        :to="{path:'/category/'+item.categoryName}"
+        v-for="item in $store.state.categoryList"
+        :class="{'active':categoryName==item.categoryName}"
+        :key="item.id"
+        v-html="item.categoryName"
+      ></nuxt-link>
     </div>
-    <v-art-list class="blogs" :list="list">
+    <v-art-list
+      class="blogs"
+      :list="list"
+    >
       <div class="pagelist">
-        <nuxt-link :to="{path:'/category/'+categoryName,query:{page:nextPageIndex}}" v-if="nextPageIndex>0">点击加载更多</nuxt-link>
-        <a href="javascript:void(0)" v-else>已全部加载完毕</a>
+        <nuxt-link
+          :to="{path:'/category/'+categoryName,query:{page:nextPageIndex}}"
+          v-if="nextPageIndex>0"
+        >点击加载更多</nuxt-link>
+        <a
+          href="javascript:void(0)"
+          v-else
+        >已全部加载完毕</a>
       </div>
     </v-art-list>
     <aside>
