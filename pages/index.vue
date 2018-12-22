@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      title: '首页 - ' + this.$store.state.appInfo.siteTitle
+      title: this.$store.state.appInfo.siteTitle
     }
   },
   data() {

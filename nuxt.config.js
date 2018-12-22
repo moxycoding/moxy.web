@@ -3,7 +3,7 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
   env: {
-    baseUrl: process.env.API_BASE_URL || 'http://localhost:64832/api'
+    baseUrl: process.env.API_BASE_URL || 'http://localhost:6612/api'
   },
   /*
    ** Headers of the page
@@ -22,7 +22,7 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#399e9a', height: '4px' },
+  loading: { color: '#399e9a', height: '2px' },
 
   /*
    ** Global CSS

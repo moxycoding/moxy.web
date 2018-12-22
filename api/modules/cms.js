@@ -22,3 +22,12 @@ export function getCategoryArtList(params) {
     params: params
   })
 }
+export function getTagsList() {
+  return fetch.get(`${prefix}/tags/list`)
+}
+export function getTagsArtList(params) {
+  return fetch({
+    url: `${prefix}/article/list`,
+    params: params
+  })
+}

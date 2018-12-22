@@ -4,9 +4,19 @@
       <div class="logo"><a href="/">{{appInfo.siteName}}</a></div>
       <nav>
         <ul id="starlist">
-          <li v-for="(item,index) in appInfo.menus" :key="index" :class="{'active':fullPath===item.menuUrl}">
-            <a :href="item.menuUrl" v-if="item.menuUrl&&item.menuUrl.startsWith('http')">{{item.menuName}}</a>
-            <nuxt-link :to="item.menuUrl" v-else>{{item.menuName}}</nuxt-link>
+          <li
+            v-for="(item,index) in appInfo.menus"
+            :key="index"
+            :class="{'active':fullPath===item.menuUrl}"
+          >
+            <a
+              :href="item.menuUrl"
+              v-if="item.menuUrl&&item.menuUrl.startsWith('http')"
+            >{{item.menuName}}</a>
+            <nuxt-link
+              :to="item.menuUrl"
+              v-else
+            >{{item.menuName}}</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -14,7 +24,12 @@
     <div id="layout-container">
       <nuxt class="box" />
     </div>
-    <footer v-html="appInfo.footer" id="layout-footer" :class="{'layout-footer-block':!computedEnd}">
+    <footer
+      v-html="appInfo.footer"
+      v-show="appInfo.footer"
+      id="layout-footer"
+      :class="{'layout-footer-block':!computedEnd}"
+    >
     </footer>
     <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </div>
